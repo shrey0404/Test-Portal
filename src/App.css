@@ -1,38 +1,81 @@
 .App {
   text-align: center;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.question-display {
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navigation-buttons {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.navigation-buttons button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.navigation-buttons button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.navigation-buttons button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.question-legend {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-bottom: 20px;
+}
+
+.legend-button {
+  width: 30px;
+  height: 30px;
+  margin: 0 5px;
+  border: 1px solid #ccc;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.legend-button.answered {
+  background-color: #28a745;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.legend-button.current {
+  background-color: #007bff;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.legend-button:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+.timer {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #dc3545; /* Red color to show urgency */
+}
+
+body {
+  background: linear-gradient(to bottom right, rgba(10, 10, 20, 0.9), rgba(20, 20, 40, 0.9));
+  color: #ffffff; /* Set default text color to white for better readability */
+}
+
+.container {
+  padding: 20px; /* Add some padding for the content */
+  min-height: 100vh; /* Ensure the container takes full height */
 }
